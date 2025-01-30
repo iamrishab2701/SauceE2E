@@ -1,0 +1,2 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"Login with username and password and verify successful login","802","Verify user login with valid credentials","Surefire suite","Fri Jan 31 00:54:07 IST 2025","passed","Fri Jan 31 00:54:07 IST 2025","tests.LoginTest","Surefire test","tests.LoginTest","loginTest"
