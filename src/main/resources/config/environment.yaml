@@ -1,5 +1,21 @@
-browser: "chrome"
-baseUrl: "https://www.saucedemo.com/v1/"
-credentials:
-  username: "standard_user"
-  password: "secret_sauce"
+environments:
+  staging:
+    browser: "chrome"
+    baseUrl: "https://www.saucedemo.com/v1/"
+    credentials:
+      username: "standard_user"
+      password: "secret_sauce"
+  
+  integration:
+    browser: "chrome"
+    baseUrl: "https://www.saucedemo.com/v1/"
+    credentials:
+      username: "locked_out_user"
+      password: "secret_sauce"
+
+  production:
+    browser: "chrome"
+    baseUrl: "https://www.saucedemo.com/v1/"
+    credentials:
+      username: "problem_user"
+      password: "secret_sauce"
