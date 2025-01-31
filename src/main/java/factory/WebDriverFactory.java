@@ -25,7 +25,7 @@ public class WebDriverFactory {
             case "firefox":
                 firefoxOptions = new FirefoxOptions();
                 firefoxOptions.addArguments("--headless");
-                return new FirefoxDriver();
+                return new FirefoxDriver(firefoxOptions);
             case "edge":
                 edgeOptions = new EdgeOptions();
                 edgeOptions.addArguments("--headless");
