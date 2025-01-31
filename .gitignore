@@ -42,3 +42,5 @@ allure-report/widgets/severity.json
 allure-report/widgets/status-chart.json
 allure-report/widgets/suites.json
 allure-report/widgets/summary.json
+allure-report
+allure-results/*
