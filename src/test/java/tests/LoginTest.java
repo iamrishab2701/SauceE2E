@@ -22,5 +22,6 @@ public class LoginTest extends BaseTest {
         loginPage.enterUsername(ConfigReader.getUsername());
         loginPage.enterPassword(ConfigReader.getPassword());
         loginPage.clickLogin();
+        System.out.println("Current Page Title is : " + loginPage.getPageTitle());
     }
 }

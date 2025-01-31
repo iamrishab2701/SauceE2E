@@ -25,4 +25,8 @@ public class LoginPage {
     public void clickLogin() {
         driver.findElement(loginButton).click();
     }
+
+    public String getPageTitle(){
+        return driver.getTitle();
+    }
 }
