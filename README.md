@@ -72,6 +72,12 @@ mvn test -Dtest=LoginTest
 mvn test -Dsurefire.suiteXmlFiles=testng.xml
 ```
 
+### **4️⃣ Run Tests with Environment Selection**
+```sh
+mvn test -Dbrowser=chrome -Denv=staging
+```
+Supported environments: `staging`, `integration`, `production`.
+
 ---
 
 ## 📊 **Generating Allure Reports**
@@ -109,10 +115,10 @@ Access Jenkins at: [http://localhost:8080](http://localhost:8080)
 2. **Source Code Management** → Add your GitHub repo
 3. **Build Triggers** → Select "Poll SCM" (`H/5 * * * *`)
 4. **Build Steps** → Add `Invoke top-level Maven targets`
-   - **Goals**: `clean test`
+   - **Goals**: `clean test -Dbrowser=$BROWSER -Denv=$ENV`
 5. **Post-Build Actions** → **Add "Allure Report"**
    - **Path**: `allure-results`
-6. **Click "Save" and "Build Now"**
+6. **Click "Save" and "Build Now"`
 
 ---
 
