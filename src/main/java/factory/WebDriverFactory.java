@@ -4,23 +4,32 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 import config.ConfigReader;
 
 public class WebDriverFactory {
-    public static ChromeOptions options;
+    public static ChromeOptions chromeOptions;
+    public static FirefoxOptions firefoxOptions;
+    public static EdgeOptions edgeOptions;
+
     public static WebDriver createDriver() {
-        String browser = ConfigReader.getBrowser().toLowerCase();
+        String browser = ConfigReader.getBrowser();
         switch (browser) {
             case "chrome":
-                options = new ChromeOptions();
-                options.addArguments("--headless");
-                return new ChromeDriver(options);
-            case "firfox":
+                chromeOptions = new ChromeOptions();
+                chromeOptions.addArguments("--headless");
+                return new ChromeDriver(chromeOptions);
+            case "firefox":
+                firefoxOptions = new FirefoxOptions();
+                firefoxOptions.addArguments("--headless");
                 return new FirefoxDriver();
             case "edge":
-                return new EdgeDriver();
+                edgeOptions = new EdgeOptions();
+                edgeOptions.addArguments("--headless");
+                return new EdgeDriver(edgeOptions);
             default:
                 throw new IllegalArgumentException("Unsupported browser : " + browser);
         }

@@ -44,3 +44,6 @@ allure-report/widgets/suites.json
 allure-report/widgets/summary.json
 allure-report
 allure-results/*
+.vscode/*
+.allure/*
+target/*

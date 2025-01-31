@@ -23,7 +23,12 @@ public class ConfigReader {
     }
 
     public static String getBrowser() {
-        return config.get("browser").toString();
+        String browserFromSystem = System.getProperty("browser");
+
+        if (browserFromSystem != null && !browserFromSystem.isEmpty()) {
+            return browserFromSystem.toLowerCase(); // Use system-provided browser
+        }
+        return config.get("browser").toString().toLowerCase();
     }
 
     public static String getBaseUrl() {
